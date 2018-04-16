@@ -1,4 +1,4 @@
 # Blog with Gatsby
 
-# Running in development
-gatsby develop
+# Setup & Run Local Server
+npm install && gatsby develop
