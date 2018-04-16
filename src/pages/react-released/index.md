@@ -1,12 +1,12 @@
 ---
 path: "/react-released"
 date: "2018-04-01T03:15:59.175Z"
-title: "An introduction to React 16.3 Context API basics"
+title: "React 16.3 Context API basics"
 tags: ['react', 'javascript']
 excerpt: "In the coming weeks and months, the newest version of React will be released..."
 ---
 
-# React
+# React 16.3
 
 In the coming weeks and months, the newest version of React will be released — 16.3. With it comes a better implementation of the already existing Context API. I only started using React in October 2017, and on the rare occasions I had used the current Context API, I found it a bit confusing. And of course, the multitude of reasons not to use the API put me off from using it.
 

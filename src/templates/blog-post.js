@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faAngleLeft from '@fortawesome/fontawesome-free-solid/faAngleLeft'
+import faAngleRight from '@fortawesome/fontawesome-free-solid/faAngleRight'
 
 const Template = ({data, location, pathContext}) => {
-  console.log(data)
   const { markdownRemark: post } = data
   const { frontmatter, html } = post
   const { title, date } = frontmatter
@@ -12,41 +14,51 @@ const Template = ({data, location, pathContext}) => {
 
   return (
     <div>
-      <Helmet title={`${frontmatter.title} - My Blog`} />
+      <Helmet title={`${frontmatter.title} - Blog`} />
 
-      <div>
+      <div className='box-blog-post'>
         <h1>{title}</h1>
         <h3>{date}</h3>
 
         <div dangerouslySetInnerHTML={{__html: html}} />
 
-        <p>
+        <hr
+          style={{
+            marginBottom: '50px'
+          }}
+        />
+
+        <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            listStyle: 'none',
+            padding: 0
+          }}
+        >
           {prev && (
-            <Link to={prev.frontmatter.path}>
-              Previous: {prev.frontmatter.title}
-            </Link>
+            <li>
+              <Link to={prev.frontmatter.path}>
+                <FontAwesomeIcon icon={faAngleLeft} className='prevt-icon' />
+                {prev.frontmatter.title}
+              </Link>
+            </li>
           )}
-        </p>
-        <p>
+
           {next && (
-            <Link to={next.frontmatter.path}>
-              Next: {next.frontmatter.title}
-            </Link>
+            <li>
+              <Link to={next.frontmatter.path}>
+                {next.frontmatter.title}
+                <FontAwesomeIcon icon={faAngleRight} className='next-icon' />
+              </Link>
+            </li>
           )}
-        </p>
+        </ul>
       </div>
     </div>
   )
 }
-
-
-Template.propTypes = {
-  data: PropTypes.object,
-  location: PropTypes.object,
-  pathContext: PropTypes.object
-}
-
-export default Template
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
@@ -62,3 +74,11 @@ export const pageQuery = graphql`
     }
   }
 `
+
+Template.propTypes = {
+  data: PropTypes.object,
+  location: PropTypes.object,
+  pathContext: PropTypes.object
+}
+
+export default Template

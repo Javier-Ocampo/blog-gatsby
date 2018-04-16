@@ -6,7 +6,6 @@ import faCalendarAlt from '@fortawesome/fontawesome-free-solid/faCalendarAlt'
 import faTags from '@fortawesome/fontawesome-free-solid/faTags'
 
 const IndexPage = ({data}) => {
-  console.log(data)
   const { edges: posts } = data.allMarkdownRemark
   return (
     <div>
@@ -44,7 +43,6 @@ const IndexPage = ({data}) => {
             <Link to={frontmatter.path} className='btn-read'>
               Read More
             </Link>
-            <hr />
           </div>
         )
       })}

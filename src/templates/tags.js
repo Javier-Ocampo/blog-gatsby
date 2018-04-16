@@ -7,11 +7,21 @@ const Tags = ({ pathContext }) => {
 
   if (posts) {
     return (
-      <div>
+      <div
+        style={{
+          background: 'white',
+          paddingTop: '20px',
+          paddingBottom: '20px'
+        }}
+      >
         <span>
           Posts about {tagName}:
         </span>
-        <ul>
+        <ul
+          style={{
+            marginTop: '40px'
+          }}
+        >
           {posts.map((post, index) => (
             <li key={index}>
               <Link to={post.frontmatter.path}>
@@ -21,6 +31,14 @@ const Tags = ({ pathContext }) => {
           )
           )}
         </ul>
+        <hr
+          style={{
+            marginBottom: '50px'
+          }}
+        />
+        <Link to='/tags'>
+          All Tags
+        </Link>
       </div>
     )
   }

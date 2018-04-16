@@ -7,7 +7,13 @@ const AllTags = ({ pathContext }) => {
 
   if (tags) {
     return (
-      <div>
+      <div
+        style={{
+          background: 'white',
+          paddingTop: '20px',
+          paddingBottom: '20px'
+        }}
+      >
         <ul>
           {tags.map((tag, index) => (
             <li key={index}>

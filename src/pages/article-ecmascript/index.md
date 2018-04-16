@@ -1,7 +1,7 @@
 ---
 path: "/article-ecmascript"
 date: "2018-04-11T03:15:59.175Z"
-title: "Check out these useful ECMAScript 2015 (ES6) tips and tricks"
+title: "ECMAScript 2015 (ES6) tips and tricks"
 tags: ['javascript', 'es2015']
 excerpt: "EcmaScript 2015 (aka ES6) has been around for couple of years now, and various new features can be used in clever ways. I wanted to list and discuss some of them, since I think you’ll find them useful..."
 ---

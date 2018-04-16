@@ -198,6 +198,7 @@ html {
   box-sizing: inherit;
 }
 body {
+  background: rgba(0, 0, 0, 0.2);
   color: hsla(0, 0%, 0%, 0.8);
   font-family: georgia, serif;
   font-weight: normal;
@@ -629,6 +630,10 @@ li {
 }
 
 .boxArticle {
+  background: white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  padding: 25px;
   margin-bottom: 25px;
 }
 
@@ -665,4 +670,18 @@ li {
 .btn-read:hover {
   background: #3F2FE9;
   color: white;
+}
+
+.box-blog-post {
+  background: white;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+}
+
+.prevt-icon {
+  margin-right: 10px;
+}
+
+.next-icon {
+  margin-left: 10px;
 }
